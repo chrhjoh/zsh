@@ -12,6 +12,7 @@
   "blocks": [
     {
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
           "background": "p:blue",
@@ -99,6 +100,19 @@
           "style": "diamond",
           "template": "\uf252 {{ .FormattedMs }}",
           "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:green",
+          "style": "plain",
+          "template": "\u2502",
+          "type": "text"
         }
       ],
       "type": "prompt"
