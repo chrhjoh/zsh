@@ -15,10 +15,16 @@
       "newline": true,
       "segments": [
         {
+          "foreground": "p:green",
+          "template": "\u256d\u2500",
+          "style": "plain",
+          "type": "text"
+        },
+        {
           "background": "p:blue",
           "foreground": "p:wight",
           "powerline_symbol": "\ue0b4",
-          "leading_diamond": "\u256d\u2500\ue0b6",
+          "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": "{{.Icon}} ",
           "type": "os"
