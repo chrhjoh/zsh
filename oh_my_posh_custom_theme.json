@@ -7,7 +7,8 @@
         "blue":  "#8AADF4",
         "wight": "#FFFFFF",
         "green": "#a6e3a1",
-        "text": "#494D64"
+        "text": "#494D64",
+        "red": "#f38ba8"
   },
   "blocks": [
     {
@@ -16,9 +17,15 @@
       "segments": [
         {
           "foreground": "p:green",
+          "foreground_templates": [
+             "{{ if .Error }}p:red{{ end }}"
+          ],
           "template": "\u256d\u2500",
           "style": "plain",
-          "type": "text"
+          "type": "status",
+          "properties": {
+            "always_enabled": true
+            }
         },
         {
           "background": "p:blue",
@@ -116,9 +123,15 @@
       "segments": [
         {
           "foreground": "p:green",
+          "foreground_templates": [
+            "{{ if .Error }}p:red{{ end }}"
+          ],
           "style": "plain",
+          "properties": {
+            "always_enabled" : true
+          },
           "template": "\u2502",
-          "type": "text"
+          "type": "status"
         }
       ],
       "type": "prompt"
@@ -129,9 +142,15 @@
       "segments": [
         {
           "foreground": "p:green",
+          "foreground_templates": [
+            "{{ if .Error }}p:red{{ end }}"
+          ],
           "style": "plain",
+          "properties": {
+            "always_enabled": true
+          },
           "template": "\u2570\u2500",
-          "type": "text"
+          "type": "status"
         }
       ],
       "type": "prompt"
@@ -141,12 +160,18 @@
       "segments": [
         {
           "background": "p:green",
+          "background_templates": [
+            "{{ if .Error }}p:red{{ end }}"
+          ],
           "foreground": "p:text",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
           "style": "diamond",
-          "template": " \uf0a9 ",
-          "type": "text"
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "{{ if .Error }}\u2716{{ else }}\u2713{{ end }}",
+          "type": "status"
         }
       ],
         "type": "prompt"
