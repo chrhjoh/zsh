@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-        "os": "#ACB0BE",
-        "pink": "#F5BDE6",
-        "lavender": "#B7BDF8",
-        "blue":  "#8AADF4",
-        "wight": "#FFFFFF",
-        "green": "#a6e3a1",
-        "text": "#494D64",
-        "red": "#f38ba8"
+    "os": "#ACB0BE",
+    "pink": "#F5BDE6",
+    "lavender": "#B7BDF8",
+    "blue": "#8AADF4",
+    "wight": "#FFFFFF",
+    "green": "#a6e3a1",
+    "text": "#494D64",
+    "red": "#f38ba8"
   },
   "blocks": [
     {
@@ -18,14 +18,14 @@
         {
           "foreground": "p:green",
           "foreground_templates": [
-             "{{ if .Error }}p:red{{ end }}"
+            "{{ if .Error }}p:red{{ end }}"
           ],
           "template": "\u256d\u2500",
           "style": "plain",
           "type": "status",
           "properties": {
             "always_enabled": true
-            }
+          }
         },
         {
           "background": "p:blue",
@@ -90,11 +90,23 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b6",
+          "invert_powerline": true,
+          "foreground": "p:text",
+          "background": "#cba6f7",
+          "template": " \uE235 {{ .Major }}.{{ .Minor }} {{ if .Venv }}{{ .Venv }} {{ end }}",
+          "properties": {
+            "fetch_virtual_env": true
+          }
+        },
+        {
           "background": "p:green",
           "foreground": "p:text",
           "properties": {
             "time_format": "15:04"
-            },
+          },
           "style": "powerline",
           "powerline_symbol": "\ue0b6",
           "invert_powerline": true,
@@ -128,7 +140,7 @@
           ],
           "style": "plain",
           "properties": {
-            "always_enabled" : true
+            "always_enabled": true
           },
           "template": "\u2502",
           "type": "status"
@@ -174,7 +186,7 @@
           "type": "status"
         }
       ],
-        "type": "prompt"
+      "type": "prompt"
     }
   ],
   "final_space": true,
